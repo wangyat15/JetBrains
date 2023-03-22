@@ -1,0 +1,929 @@
+<!doctype html>
+<html lang="en_US">
+<head>
+    <title>Rider 2023.1 EAP 3 现已推出，增强了Docker和结构视图，并提供本地化预览 | .NET 工具博客</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+        <link rel="preload" href="https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/wp-content/themes/jetbrains/assets/fonts/JetBrainsMono-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/wp-content/themes/jetbrains/assets/fonts/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <style type="text/css">
+        /*
+ * Core styles for PriorityNav.js
+ * These styles are not optional and should always be included
+ *
+ * Free to use under the MIT License.
+ * http://twitter.com/GijsRoge
+ */
+.priority-nav {
+  white-space: nowrap;
+  /*
+    * Makes sure the menu's are inline-block so they don't take up
+    * the entire width of its parent. This will break the plugin.
+    */
+}
+
+.priority-nav > ul {
+  display: inline-block;
+}
+
+.priority-nav > ul > li {
+  display: inline-block;
+}
+
+.priority-nav-has-dropdown .priority-nav__dropdown-toggle {
+  position: relative;
+}
+
+.priority-nav__wrapper {
+  position: relative;
+}
+
+.priority-nav__dropdown {
+  position: absolute;
+  visibility: hidden;
+}
+
+.priority-nav__dropdown.show {
+  visibility: visible;
+}
+
+.priority-nav__dropdown-toggle {
+  visibility: hidden;
+  position: absolute;
+}
+
+.priority-nav-is-visible {
+  visibility: visible;
+}
+
+.priority-nav-is-hidden {
+  visibility: hidden;
+}
+/* Regular weight */
+@font-face {
+  font-family: 'JetBrains Sans';
+  src: url('https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff2') format('woff2'), url('https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+/* SemiBold weight */
+@font-face {
+  font-family: 'JetBrains Sans';
+  src: url('https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff2') format('woff2'), url('https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff') format('woff');
+  font-weight: 530;
+  font-style: normal;
+  font-display: swap;
+}
+.custom-select-container {
+  position: relative;
+  box-sizing: border-box;;
+}
+.custom-select-container * {
+  box-sizing: border-box;
+}
+.custom-select-container.is-disabled {
+  opacity: .333;
+}
+.custom-select-opener {
+  background-color: #ccc;
+  padding: 0.5em;
+  display: block;
+  cursor: pointer;
+  width: 100%;
+}
+.custom-select-container select {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.custom-select-panel {
+  max-height: 0;
+  transition: max-height .5s ease-out, overflow-y 0.1s 0.5s;
+  overflow: hidden;
+  background-color: #e9e9e9;
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+  width: 100%;
+}
+.custom-select-container.is-open .custom-select-panel {
+  max-height: 10.7em;
+  overflow-y: auto
+}
+.custom-select-option {
+  padding: 0.5em;
+}
+.custom-select-option.has-focus {
+  background-color: LightBlue;
+}
+.custom-select-option.is-selected::before {
+  content: "✔";
+  padding-right: 0.5em;
+}
+.custom-select-optgroup > .custom-select-option {
+  padding-left: 2em;
+}
+.custom-select-optgroup::before {
+  content: attr(data-label);
+  display: block;
+  padding: 0.5em;
+  color: #888;
+}
+.menu-list,.dropdown-language,.navbar ul.row,.sub-menu,main ul:not([class]):not([id]),.menu__nav>ul,.priority-nav__dropdown,.social{margin:0;padding:0;list-style:none}.clearfix:after{content:'';display:block;clear:both}.ellipsis{white-space:nowrap;text-overflow:ellipsis;overflow:hidden}html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}*{max-height:1000000px}body{color:#19191C;background:#fff;font:16px/1.2 "Arial","Helvetica Neue","Helvetica",sans-serif;min-width:320px;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}img{max-width:100%;height:auto;vertical-align:top}.gm-style img{max-width:none}h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6,.h{font-family:"Arial","Helvetica Neue","Helvetica",sans-serif;font-weight:530;margin:0 0 0.5em;color:#19191C}h1,.h1{font-size:35px}h2,.h2{font-size:28px}h3,.h3{font-size:20px}h4,.h4{font-size:17px}h5,.h5{font-size:14px}h6,.h6{font-size:16px}p{margin:0 0 1em}a{color:#19191C}a:hover,a:focus{text-decoration:none}form,fieldset{margin:0;padding:0;border-style:none}input[type='text'],input[type='tel'],input[type='email'],input[type='search'],input[type='password'],textarea{-webkit-appearance:none;-webkit-border-radius:0;box-sizing:border-box;outline:none;border:1px solid rgba(39,40,44,0.15);padding:0.4em 0.7em}input[type='text']::-webkit-input-placeholder,input[type='tel']::-webkit-input-placeholder,input[type='email']::-webkit-input-placeholder,input[type='search']::-webkit-input-placeholder,input[type='password']::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#19191C}input[type='text']::-moz-placeholder,input[type='tel']::-moz-placeholder,input[type='email']::-moz-placeholder,input[type='search']::-moz-placeholder,input[type='password']::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#19191C}input[type='text']:-moz-placeholder,input[type='tel']:-moz-placeholder,input[type='email']:-moz-placeholder,input[type='search']:-moz-placeholder,input[type='password']:-moz-placeholder,textarea:-moz-placeholder{color:#19191C}input[type='text']:-ms-input-placeholder,input[type='tel']:-ms-input-placeholder,input[type='email']:-ms-input-placeholder,input[type='search']:-ms-input-placeholder,input[type='password']:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#19191C}input[type='text'].placeholder,input[type='tel'].placeholder,input[type='email'].placeholder,input[type='search'].placeholder,input[type='password'].placeholder,textarea.placeholder{color:#19191C}select{-webkit-border-radius:0}textarea{resize:vertical;vertical-align:top}button,input[type='button'],input[type='reset'],input[type='file'],input[type='submit']{-webkit-appearance:none;-webkit-border-radius:0;cursor:pointer}/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}[class^="icon-"],[class*=" icon-"]{font-family:"icomoon" !important;speak:never;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.icon-warning:before{content:"\e91f"}.icon-alert:before{content:"\e920"}.icon-dots:before{content:"\e91e"}.icon-vk:before{content:"\e915"}.icon-notification:before{content:"\e91d"}.icon-twitter:before{content:"\e902"}.icon-facebook:before{content:"\e904"}.icon-instagram:before{content:"\e907"}.icon-linkedin:before{content:"\e914"}.icon-rss-feed:before{content:"\e918"}.icon-language:before{content:"\e919"}.icon-union:before{content:"\e91a"}.icon-pocket:before{content:"\e906"}.icon-reddit:before{content:"\e908"}.icon-search:before{content:"\e909"}.icon-share:before{content:"\e911"}.icon-slack:before{content:"\e912"}.icon-stackoverflow:before{content:"\e913"}.icon-weibo:before{content:"\e916"}.icon-email:before{content:"\e917"}.icon-cart:before{content:"\e900"}.icon-comments:before{content:"\e901"}.icon-globus:before{content:"\e903"}.icon-like:before{content:"\e905"}.icon-user:before{content:"\e90a"}.icon-wechat:before{content:"\e90b"}.icon-youtube:before{content:"\e90c"}.icon-arrow-left:before{content:"\e90d"}.icon-arrow-right:before{content:"\e90e"}.icon-bag:before{content:"\e90f"}.icon-down:before{content:"\e910"}.icon-close:before{content:"\e91c"}.icon-menu:before{content:"\e91b"}.icon-play:before{content:"\ea1c"}.icon-stop:before{content:"\ea1e"}.header{position:relative;flex-shrink:0;background:#27282c;z-index:999}.header>.container{display:flex;flex-wrap:wrap;align-items:center}.logo{display:block;width:105px}@media (min-width: 769px){.logo{width:145px}}.logo a{display:flex;flex-wrap:wrap;align-items:center;color:#fff;font-size:16px;line-height:1.5}@media (min-width: 768px){.logo a{font-size:20px;line-height:1.4}}.logo img{display:block;width:48px;margin:0 16px 0 0}@media (min-width: 769px){.logo img{width:72px;margin:0 24px 0 0}}.logo p{margin:0}.menu-list{position:relative;display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;padding:0 40px 0 0;width:calc(100% - 105px)}@media (min-width: 769px){.menu-list{padding:0 6px 0 30px;width:calc(100% - 145px)}}.menu-list>li{margin-left:18px}@media (min-width: 768px){.menu-list>li{margin-left:26px}}@media (min-width: 1024px){.menu-list>li:first-child{margin-right:14px}}.menu-list a{display:inline-block;vertical-align:top;color:rgba(255,255,255,0.7);border:none;box-shadow:none}.menu-list a .mobile-hidden{display:none}@media (min-width: 769px){.menu-list a .mobile-hidden{display:block}}.menu-list a:hover{color:#fff;text-decoration:none;box-shadow:none}.menu-list a:hover i:not(.burger-icon){color:#fff}.menu-list a:hover i:not(.burger-icon):after{background:rgba(255,255,255,0.1)}.menu-list i:not(.burger-icon){transition:color .15s ease-in-out;position:relative;font-size:16px;color:rgba(255,255,255,0.7)}.menu-list i:not(.burger-icon).icon-search{font-size:22px}.menu-list i:not(.burger-icon):after{transition:background .15s ease-in-out;content:"";position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:35px;height:35px;border-radius:50%}@media (min-width: 769px){.menu-list i:not(.burger-icon):after{width:40px;height:40px}}.dropdown-language{transition:opacity .15s ease-in-out,visibility .15s ease-in-out;font-size:14px;position:absolute;top:100%;right:-15px;transform:none;background:#27282c;margin:8px 0 0;border:1px solid #5e5e60;opacity:0;visibility:hidden;width:180px}@media (min-width: 1024px){.dropdown-language{font-size:16px;margin:20px 0 0 0;right:0;width:auto;display:inline-grid;grid-auto-flow:column;grid-template-rows:auto auto auto auto;grid-template-columns:auto auto auto auto}}@media (min-width: 769px){.dropdown-language li{display:flex;min-width:120px}}.dropdown-language a{transition:background .15s ease-in-out,color .15s ease-in-out;display:block;padding:8px 16px;color:rgba(255,255,255,0.7);border:none;box-shadow:none}@media (min-width: 769px){.dropdown-language a{padding:12px 16px;flex-grow:1}}.dropdown-language a.active{background:rgba(22,125,255,0.2);color:#fff;text-decoration:none}.dropdown-language a:hover{background:rgba(255,255,255,0.1);color:#fff;text-decoration:none}.navbar{transition:opacity .15s ease-in-out,visibility .15s ease-in-out;position:absolute;top:100%;left:0;right:0;z-index:99;background:#fff;padding:30px 0 8px;opacity:0;visibility:hidden}.navbar ul.row{display:flex;flex-wrap:wrap}.navbar ul.row>li{width:100%;padding-left:16px}@media (min-width: 641px){.navbar ul.row>li{padding-left:32px}}@media (min-width: 769px){.navbar ul.row>li{width:18%}}@media (min-width: 1281px){.navbar ul.row>li{padding-left:32px}}@media (min-width: 1025px){.navbar ul.row>li:first-child{width:24%}}.navbar ul.row>li>.sub-menu>li:first-child{margin:0 0 9px}@media (max-width: 768px){.navbar ul.row>li>.sub-menu>li{width:100%}}.navbar h3{margin:0}.navbar h3+.sub-menu{margin-top:9px}.sub-menu{display:flex;flex-wrap:wrap;margin-bottom:16px}.sub-menu li{margin:0 0 10px;width:50%;padding:6px 0 0}@media (min-width: 641px){.sub-menu li{width:25%}}@media (min-width: 769px){.sub-menu li{width:100%}}@media (min-width: 1025px){.sub-menu li.columns .sub-menu{display:block;column-count:2}}@media (min-width: 1025px){.sub-menu li.columns .sub-menu li{width:auto}}.sub-menu a{position:relative;color:rgba(25,25,28,0.7);border:none;box-shadow:none}.sub-menu a:hover{color:#19191C;text-decoration:none}@media (min-width: 769px){.sub-menu a:hover img{opacity:1;visibility:visible}}.sub-menu a img{transition:opacity .15s ease-in-out,visibility .15s ease-in-out;position:absolute;width:32px;height:32px;left:-40px;top:-6px;opacity:0;visibility:hidden}.burger-icon{position:absolute;top:50%;transform:translateY(-50%);right:16px;width:16px;height:18px;text-indent:-9999px;overflow:hidden;text-decoration:none;z-index:999;margin-top:-1px}@media (min-width: 769px){.burger-icon{display:none}}.burger-icon:before,.burger-icon:after,.burger-icon span{background:rgba(255,255,255,0.7);position:absolute;top:10px;left:0;right:0;height:2px;margin-top:-2px;transition:all 0.2s linear}.burger-icon:before,.burger-icon:after{content:"";top:4px}.burger-icon:after{top:16px}.nav-active .burger-icon:before,.nav-active .burger-icon:after{transform:rotate(45deg);top:10px}.nav-active .burger-icon span{opacity:0}.nav-active .burger-icon:after{transform:rotate(-45deg)}.resize-active *{transition:none !important}html body{font-family:"JetBrains Sans","Arial","Helvetica Neue","Helvetica",sans-serif}html body h1,html body .h1,html body h2,html body .h2,html body h3,html body .h3,html body h4,html body .h4,html body h5,html body .h5,html body h6,html body .h6,html body .h{font-family:inherit}body.admin-bar #wp-admin-bar-customize,body.admin-bar #wp-admin-bar-comments,body.admin-bar #wp-admin-bar-all-in-one-seo-pack{display:none}body.admin-bar #wp-admin-bar-new-content>.ab-item{pointer-events:none}body.admin-bar #wp-admin-bar-new-content #wp-admin-bar-new-post{display:none}body{font-size:16px;line-height:1.5}body.nav-active .navbar{opacity:1;visibility:visible}body.nav-active .overlay{opacity:1;visibility:visible}body.lang-active .header .dropdown-language{opacity:1;visibility:visible}body.toc-active{overflow:hidden}body.single .top-page{padding-bottom:0}body.single .menu{position:relative;bottom:auto;left:auto;right:auto}@media (min-width: 768px){body.single .menu{padding:32px 0 0}}body.footer-lang-active .footer .dropdown-language{opacity:1;visibility:visible}body .tag{transition:border-color .15s ease-in-out,background .15s ease-in-out;font-size:13px;line-height:1.54;padding:1px 15px;display:inline-block;border:1px solid rgba(25,25,28,0.3);border-radius:4px;margin:0 8px 8px 0;white-space:nowrap;cursor:pointer}body .tag:hover{background:rgba(25,25,28,0.1);border-color:rgba(25,25,28,0.4);text-decoration:none;box-shadow:none}@media (max-width: 767px){body.search .top-page{padding-bottom:35px}}@media (max-width: 767px){body.search .menu{display:none}}#wrapper{min-height:100vh;width:100%;display:flex;flex-direction:column;overflow:hidden;position:relative}a{transition:color .15s ease-in-out,box-shadow .15s ease-in-out,border-color .15s ease-in-out;text-decoration:none;border-bottom:1px solid rgba(25,25,28,0.4)}a:hover{border-color:#19191C}h1{line-height:1.22}@media (min-width: 641px){h1{font-size:43px;line-height:1.14}}h2{line-height:1.143}@media (min-width: 641px){h2{font-size:35px;line-height:1.2}}h3{line-height:1.4;margin:0 0 16px}h4{font-size:17px;line-height:1.412;margin:0 0 16px}h5{font-size:14px;line-height:1.43;margin:0 0 8px}.btn,.jb-download-button{transition:background .15s ease-in-out;font-size:16px;line-height:1.5;display:inline-block;vertical-align:middle;text-align:center;border-radius:2em;color:#fff;background:#6B57FF;padding:8px 24px;border:none}.btn:hover,.jb-download-button:hover{text-decoration:none;box-shadow:none;background:rgba(107,87,255,0.8)}pre,code{font-family:"JetBrainsMono","Times","Baskerville","Georgia",serif;font-style:normal;font-weight:400;font-size:15px;line-height:23px;background:#f4f4f4;border-radius:4px;padding:12px 16px}pre code{padding:0}code{padding:4px 6px}input[type="search"]{-webkit-appearance:none}.container{max-width:1534px;margin:0 auto;padding:0 15px}@media (min-width: 641px){.container{padding:0 32px}}main{flex-grow:1}main .article-section .content ul a:hover{box-shadow:inset 0 -1px 0 #19191c}main .article-section .content ol:not([class]):not([id]) img{margin:22px 0 24px}main .article-section .content ul:not([class]):not([id]){margin-bottom:24px}main .article-section .content ul:not([class]):not([id]) li:last-child{padding-bottom:0}main .article-section .content ul:not([class]):not([id]) li ul:not([class]):not([id]){margin-top:0;margin-bottom:0}main .article-section .content ul:not([class]):not([id]) img{margin:22px 0 24px}main .article-section .content ul:not([class]):not([id])+h2{margin-top:32px}main ul:not([class]):not([id]) li{position:relative;padding:0 0 16px 25px}@media (min-width: 769px){main ul:not([class]):not([id]) li{padding-bottom:24px}}main ul:not([class]):not([id]) li:before{content:"";position:absolute;top:10px;left:2px;width:5px;height:5px;background:#19191C;border-radius:50%}main ul:not([class]):not([id]) li ul:not([class]):not([id]){margin-top:24px}main ul:not([class]):not([id]) li ul:not([class]):not([id]) li{padding-left:32px}main ul:not([class]):not([id]) li ul:not([class]):not([id]) li:before{left:8px;background:transparent;border:1px solid #19191C}button{background:transparent;border:none;outline:none}.form-group{position:relative}.found-wrap{padding:0 16px}@media (min-width: 769px){.row{display:flex;flex-wrap:wrap;margin:0 -16px}}@media (min-width: 769px){.row.card_container .col:nth-child(4n+4){display:flex}}@media (min-width: 769px){.col{display:flex;width:50%;padding:0 16px}}@media (min-width: 1025px){.col{width:33.332%}}@media (min-width: 1281px){.col{width:25%}}@media (min-width: 1025px){.col:nth-child(4n+4){display:none}}@media (min-width: 1281px){.col:nth-child(4n+4){display:flex}}@media (max-width: 767px){.col:last-child .card{margin:0}}.col--double{display:block;width:100%}@media (min-width: 1281px){.col--double{width:66.664%}}.col--double img{border-radius:10px}@media (min-width: 1025px){.row.last-col-home .col:nth-child(4n+4){display:flex}}@media (min-width: 1025px){.row.last-col-home .col:nth-child(4n+7),.row.last-col-home .col:nth-child(4n+8){display:none}}@media (min-width: 1281px){.row.last-col-home .col:nth-child(4n+7),.row.last-col-home .col:nth-child(4n+8){display:flex}}@media (min-width: 1025px){.row.last-col-home.show_all .col:nth-child(4n+7),.row.last-col-home.show_all .col:nth-child(4n+8){display:flex}}@media (min-width: 1281px){.row.last-col-home.show_all .col:nth-child(4n+7),.row.last-col-home.show_all .col:nth-child(4n+8){display:flex}}@media (min-width: 1025px){.row.latest_posts .col:nth-child(4n+6){display:none}}@media (min-width: 1281px){.row.latest_posts .col:nth-child(4n+6){display:flex}}@media (min-width: 1025px){.row.latest_posts .col:nth-child(4n+5){display:none}}@media (min-width: 1281px){.row.latest_posts .col:nth-child(4n+5){display:flex}}@media (min-width: 1025px){.row.latest_posts .col:nth-child(4n+4){display:flex}}.row.latest_posts .col--double{display:block;width:100%}@media (min-width: 1025px){.row.latest_posts .col--double{width:66.66%}}@media (min-width: 1281px){.row.latest_posts .col--double{width:50%}}.dark-theme{background:#19191C;color:white}.light-gray-bg{background:#F4F4F4}.light-gray-bg .card{background:#fff}.top-page{position:relative;padding:35px 0 66px}@media (min-width: 768px){.top-page{min-height:199px}}@media (min-width: 1024px){.top-page{padding:30px 0 90px}}.top-page .social-opener{display:block;position:relative;padding:7px 24px 6px 32px;border-radius:3em;border:1px solid rgba(25,25,28,0.3);text-align:center}.top-page .social-opener:hover{box-shadow:none}.top-page .social-opener:after{content:"\e910";font-size:24px;line-height:1;font-family:"icomoon";cursor:pointer;pointer-events:none;display:inline-block;vertical-align:middle;margin:0 0 0 8px}.top-page h2{color:#000;margin:0}.top-page h2+p{margin-top:10px}.top-page__row{display:flex;flex-wrap:wrap;align-items:flex-start}.top-page__head{position:relative;display:flex;flex-wrap:wrap;align-items:center;z-index:15}@media (min-width: 1024px){.top-page__head{width:55%}}.top-page__head a{border:none}.top-page__head a:hover{box-shadow:none}.top-page__head .text-container{width:100%}@media (min-width: 641px){.top-page__head .text-container{width:calc(100% - 72px - 24px)}}.top-page__head .text-container a{color:#000}.top-page__head .text-container a:hover{text-decoration:none}.top-page__head p{width:100%;margin:0}.top-page__head img{width:72px;height:72px;margin:0 24px 16px 0}@media (min-width: 1025px){.top-page__head img{margin:0 24px 0 0}}.top-page__right{display:none}@media (min-width: 1024px){.top-page__right{display:flex;justify-content:flex-end;width:45%}}@media (max-width: 1023px){.top-page__right.social-active .social{opacity:1;visibility:visible}}@media (max-width: 1023px){.top-page__right .social{position:absolute;top:100%;width:200px;border:1px solid #d1d1d2;border-top:none;background:#fff;opacity:0;visibility:hidden;margin:0}}@media (min-width: 1024px){.top-page__right .social{margin:0 -6px}}.top-page__right .social li:first-child{display:none}@media (min-width: 1024px){.top-page__right .social li:first-child{display:block;padding-right:20px}}@media (max-width: 1023px){.top-page__right .social li{width:100%;padding:0}}@media (max-width: 1023px){.top-page__right .social li a{align-items:center;padding:8px 11px}}.top-page__right .social li a:hover{box-shadow:none}@media (max-width: 1023px){.top-page__right .social li a:hover{background:rgba(25,25,28,0.1)}}@media (max-width: 1023px){.top-page__right .social li a:hover i:after{background:transparent}}@media (max-width: 1023px){.top-page__right .social li a i{margin:-3px 10px 0 0}}@media (min-width: 1024px){.top-page__right .social li a span{display:none}}@media (min-width: 768px){.top-page__right .social-opener{display:block;text-align:left;padding:7px 48px 7px 24px}}@media (min-width: 1024px){.top-page__right .social-opener{display:none}}@media (min-width: 768px){.top-page__right .social-opener:after{position:absolute;top:50%;right:15px;transform:translateY(-50%);margin:0}}.top-page__mobile{position:relative;display:flex;flex-direction:column;margin:16px 0}@media (min-width: 461px){.top-page__mobile{flex-direction:row;align-items:center;margin:16px -8px}}@media (min-width: 1024px){.top-page__mobile{display:none}}.top-page__mobile .btn,.top-page__mobile .social-opener{width:100%}@media (min-width: 461px){.top-page__mobile .btn,.top-page__mobile .social-opener{width:auto}}@media (max-width: 1023px){.top-page__mobile.social-active .social{opacity:1;visibility:visible}}.top-page__mobile-col{position:relative;padding:0 0 16px}@media (min-width: 461px){.top-page__mobile-col{padding:0 8px}}.top-page__mobile-col:last-child{padding-bottom:0}.top-page__mobile .social{transition:opacity .15s ease-in-out,visibility .15s ease-in-out}@media (max-width: 1023px){.top-page__mobile .social{position:absolute;top:calc(100% + 8px);left:0;right:0;background:#fff;display:flex;flex-direction:column;border:1px solid #d1d1d2;z-index:10;align-items:flex-start;margin:0;opacity:0;visibility:hidden}}@media (max-width: 1023px){.top-page__mobile .social li{padding:0;width:100%}}.top-page__mobile .social li:first-child{display:none}@media (max-width: 1023px){.top-page__mobile .social a{align-items:center;padding:8px 11px}}@media (max-width: 1023px){.top-page__mobile .social a:hover{background:rgba(25,25,28,0.1)}}@media (max-width: 1023px){.top-page__mobile .social a:hover i:after{background:transparent}}@media (max-width: 1023px){.top-page__mobile .social a i{margin:-3px 10px 0 0}}.menu{transition:transform .15s ease-in-out;display:flex;justify-content:space-between;padding:17px 0 0;position:absolute;bottom:0;left:15px;right:15px;background:#fff;z-index:9;max-width:1470px;margin:0 auto;transform:translateY(0)}@media (min-width: 641px){.menu{left:32px;right:32px}}@media (min-width: 768px){.menu{align-items:flex-end;padding:24px 0 0}}@media (min-width: 1501px){.menu{width:100%;left:auto;right:auto}}@media (min-width: 1024px){.menu:before{content:"";position:absolute;top:0;left:0;bottom:0;background:#fff;padding:0 0 0 9999px;margin:0 0 0 -9999px}}.menu:after{content:"";position:absolute;top:0;right:-16px;bottom:2px;background:-webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, #fff 100%);width:115px;pointer-events:none}@media (min-width: 768px){.menu:after{right:-32px}}@media (min-width: 1024px){.menu:after{top:0;right:0;bottom:0;padding:0 9999px 0 0;margin:0 -9999px 0 0;background:#fff;width:auto}}.menu__border{position:absolute;bottom:0;left:0;right:0;height:1px;background:rgba(39,40,44,0.15)}.menu__border:before{content:"";position:absolute;bottom:0;right:0;padding:0 9999px 0 0;margin:0 -9999px 0 0;height:1px;background:rgba(39,40,44,0.15);z-index:99}.menu__border:after{content:"";position:absolute;bottom:0;left:0;padding:0 0 0 9999px;margin:0 0 0 -9999px;height:1px;background:rgba(39,40,44,0.15);z-index:99}.menu.fixed{position:fixed;top:0;bottom:auto;z-index:991;padding-top:13px}.menu__nav{width:100%;overflow-x:auto}@media (min-width: 1024px){.menu__nav{width:80%;overflow:initial}}.menu__nav>ul{display:inline-block;margin:0 -10px;white-space:nowrap}@media (min-width: 1024px){.menu__nav>ul{margin:0 -14px}}.menu__nav>ul li{display:inline-block;padding:0 10px}@media (min-width: 1024px){.menu__nav>ul li{padding:0 14px}}.menu__nav>ul a{position:relative;display:block;color:rgba(25,25,28,0.7);border:none;box-shadow:none;padding:0 0 8px;font-feature-settings:"ss19" on}.menu__nav>ul a:hover{color:#19191C;text-decoration:none}.menu__nav>ul a:hover:after{background:#19191C}.menu__nav>ul a:after{content:"";position:absolute;bottom:0;left:0;right:0;height:1px;background:transparent}.menu__nav>ul a.curent_tax{color:#6B57FF;text-decoration:none}.menu__nav>ul a.curent_tax:after{background:#6B57FF;height:2px}.menu__nav .priority-nav__wrapper{font-size:16px;line-height:1.5;padding:0 0 0 16px}.menu__nav .nav__dropdown-toggle{transition:color .15s ease-in-out;color:rgba(25,25,28,0.7)}.menu__nav .nav__dropdown-toggle:hover{color:#19191C}.menu__nav .nav__dropdown-toggle:hover:after{color:#19191C}.menu__nav .nav__dropdown-toggle:after{transition:color .15s ease-in-out;content:"\e910";font-size:24px;font-family:"icomoon";display:inline-block;vertical-align:middle;color:rgba(25,25,28,0.7)}.menu__right{display:none}@media (min-width: 1024px){.menu__right{position:relative;display:flex;justify-content:flex-end;width:20%;align-items:center;padding:0 0 13px}}.menu__right *{position:relative;z-index:10}@media (min-width: 1024px){.menu__right:after{content:"";position:absolute;top:0;left:-36px;right:0;bottom:2px;background:linear-gradient(270deg, #fff 90.63%, rgba(255,255,255,0) 99.17%)}}@media (max-width: 767px){.menu__right .btn{font-size:13px}}.priority-nav__dropdown{top:100%;left:16px;border:1px solid #d1d1d2;background-color:white;margin:35px 0 0;z-index:99;width:320px}@media (min-width: 768px){.priority-nav__dropdown{margin-top:28px}}@media (min-width: 1024px){.priority-nav__dropdown{margin-top:35px}}.priority-nav__dropdown li:last-child{margin:0}.priority-nav__dropdown a{display:block;color:#19191c;border:none;padding:8px 16px}.priority-nav__dropdown a.curent_tax{background:#19191C;color:#fff}.priority-nav__dropdown a.curent_tax:hover{background:#19191C;color:#fff}.priority-nav__dropdown a:hover{color:#19191C;text-decoration:none;box-shadow:none;background:rgba(25,25,28,0.1)}.social{display:flex;flex-wrap:wrap;align-items:center;margin:0 -11px}.social li{padding:0 11px}.social a{display:flex;color:#19191C;border:none;box-shadow:none}.social a:hover i:after{background:rgba(25,25,28,0.1)}.social a i{position:relative;font-size:17px}.social a i.icon-twitter{font-size:15px}.social a i.icon-youtube{font-size:13px}.social a i:after{transition:background .15s ease-in-out;content:"";position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:35px;height:35px;border-radius:50%}@media (min-width: 769px){.social a i:after{width:40px;height:40px}}.social a:hover{text-decoration:none}.intro{padding:72px 0 56px;background:#F4F4F4}.intro h1{margin:0 0 24px}.intro h2{max-width:720px}.promo{padding:32px 0 0}.promo .tag{margin:0 8px 16px 0}.promo__row{display:flex;flex-wrap:wrap;flex-direction:column;position:relative;overflow:hidden}@media (min-width: 1024px){.promo__row{align-items:center;flex-direction:row}}.promo__img{background-position:0 0;background-repeat:no-repeat;background-size:cover;min-height:153px;width:100%;height:42vw;max-height:500px;overflow:hidden;border-radius:8px;border:none}@media (min-width: 640px){.promo__img{height:32vh;min-height:285px}}@media (min-width: 1024px){.promo__img{width:48.34%;min-height:218px;height:26vh}}@media (min-width: 1200px){.promo__img{width:58%;min-height:379px}}.promo__img:hover{border:none;box-shadow:none}.promo__img:only-child{width:100%}.promo__text{font-size:16px;line-height:1.5;padding:16px 0}@media (min-width: 640px){.promo__text{width:72%;padding:32px 0}}@media (min-width: 1024px){.promo__text{width:51%;padding:0 0 0 32px}}@media (min-width: 1200px){.promo__text{font-size:20px;line-height:1.4;width:42%}}.promo__text:only-child{width:100%;padding:0}@media (min-width: 1280px){.promo__text:only-child{width:74.5%}}.promo__text h1,.promo__text h2{font-size:28px;line-height:1.143;letter-spacing:0;margin-top:0;margin-bottom:16px}@media (min-width: 1200px){.promo__text h1,.promo__text h2{font-size:35px;line-height:1.2;margin-bottom:32px}}.promo__text h1 a,.promo__text h2 a{display:inline-block;color:inherit;-webkit-line-clamp:3;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;border:none;box-shadow:none}@media (min-width: 769px){.promo__text h1 a,.promo__text h2 a{-webkit-line-clamp:2}}@media (min-width: 1201px){.promo__text h1 a,.promo__text h2 a{-webkit-line-clamp:4}}.promo__text h1 a:hover,.promo__text h2 a:hover{text-decoration:none}.promo__text p{margin:0 0 16px;opacity:0.7}@media (min-width: 1200px){.promo__text p{margin:0 0 32px}}.promo__text .tag{display:none}.promo__link a{border:none;box-shadow:none}.promo__link a:hover{text-decoration:underline}.promo__link a i{display:inline-block;vertical-align:middle;font-size:15px;margin:0 0 0 4px}.promo__link .btn{padding:10px 30px;margin:0 22px 0 0}@media (min-width: 769px){.promo+.section{padding:32px 0 96px}}.overlay{transition:opacity .15s ease-in-out,visibility .15s ease-in-out;position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,0.8);z-index:11;opacity:0;visibility:hidden}.tag-list{display:flex;flex-wrap:wrap;align-items:baseline}.subscribe{font-size:20px;line-height:1.6;background-color:#F4F4F4;background-image:url(./edfb9b9971efea6f04ad75dc85db7c3a.svg);background-repeat:no-repeat;background-position-x:390%;background-position-y:25%;background-size:93%;width:100%;padding:32px}.subscribe h2{margin:0}.subscribe p{margin:0 0 15px}.subscribe form input[type="email"]{font-size:16px;line-height:1.5;max-width:328px;width:100%;height:42px;padding:6px 15px;margin:0 0 9px}.subscribe form .checkbox{padding:0 4px 28px}.subscribe form label{font-size:13px;line-height:1.54}.subscribe form button,.subscribe form input[type="submit"],.subscribe form .btn{transition:opacity .15s ease-in-out;font-size:16px;line-height:1.5;border-radius:2em;outline:none;background:#19191C;color:#fff;border:none;padding:8px 24px}.subscribe form button:hover,.subscribe form input[type="submit"]:hover,.subscribe form .btn:hover{opacity:0.8}.form-subscribe{max-width:472px;width:100%}.form-subscribe__group-input{position:relative;margin:0 0 15px}@media (min-width: 768px){.form-subscribe__group-input{margin:0 0 23px}}.form-subscribe__group-input button{transition:color .15s ease-in-out;position:absolute;top:50%;transform:translateY(-50%);right:10px;padding:0;font-size:22px;line-height:1;color:rgba(25,25,28,0.7)}.form-subscribe__group-input button:hover{color:#19191C}.form-subscribe__group-checkbox{position:relative}.form-subscribe input[type="text"],.form-subscribe input[type="tel"],.form-subscribe input[type="email"],.form-subscribe input[type="search"],.form-subscribe input[type="password"],.form-subscribe input[type="url"],.form-subscribe input[type="date"],.form-subscribe textarea{font-size:16px;line-height:1.5;width:100%;color:#19191C;border:1px solid rgba(25,25,28,0.2);height:40px;padding:7px 46px 7px 7px}.form-subscribe input[type="text"]::-webkit-input-placeholder,.form-subscribe input[type="tel"]::-webkit-input-placeholder,.form-subscribe input[type="email"]::-webkit-input-placeholder,.form-subscribe input[type="search"]::-webkit-input-placeholder,.form-subscribe input[type="password"]::-webkit-input-placeholder,.form-subscribe input[type="url"]::-webkit-input-placeholder,.form-subscribe input[type="date"]::-webkit-input-placeholder,.form-subscribe textarea::-webkit-input-placeholder{color:rgba(25,25,28,0.5)}.form-subscribe input[type="text"]::-moz-placeholder,.form-subscribe input[type="tel"]::-moz-placeholder,.form-subscribe input[type="email"]::-moz-placeholder,.form-subscribe input[type="search"]::-moz-placeholder,.form-subscribe input[type="password"]::-moz-placeholder,.form-subscribe input[type="url"]::-moz-placeholder,.form-subscribe input[type="date"]::-moz-placeholder,.form-subscribe textarea::-moz-placeholder{opacity:1;color:rgba(25,25,28,0.5)}.form-subscribe input[type="text"]:-moz-placeholder,.form-subscribe input[type="tel"]:-moz-placeholder,.form-subscribe input[type="email"]:-moz-placeholder,.form-subscribe input[type="search"]:-moz-placeholder,.form-subscribe input[type="password"]:-moz-placeholder,.form-subscribe input[type="url"]:-moz-placeholder,.form-subscribe input[type="date"]:-moz-placeholder,.form-subscribe textarea:-moz-placeholder{color:rgba(25,25,28,0.5)}.form-subscribe input[type="text"]:-ms-input-placeholder,.form-subscribe input[type="tel"]:-ms-input-placeholder,.form-subscribe input[type="email"]:-ms-input-placeholder,.form-subscribe input[type="search"]:-ms-input-placeholder,.form-subscribe input[type="password"]:-ms-input-placeholder,.form-subscribe input[type="url"]:-ms-input-placeholder,.form-subscribe input[type="date"]:-ms-input-placeholder,.form-subscribe textarea:-ms-input-placeholder{color:rgba(25,25,28,0.5)}.form-subscribe input[type="text"].placeholder,.form-subscribe input[type="tel"].placeholder,.form-subscribe input[type="email"].placeholder,.form-subscribe input[type="search"].placeholder,.form-subscribe input[type="password"].placeholder,.form-subscribe input[type="url"].placeholder,.form-subscribe input[type="date"].placeholder,.form-subscribe textarea.placeholder{color:rgba(25,25,28,0.5)}.form-subscribe input[type="text"]:focus,.form-subscribe input[type="tel"]:focus,.form-subscribe input[type="email"]:focus,.form-subscribe input[type="search"]:focus,.form-subscribe input[type="password"]:focus,.form-subscribe input[type="url"]:focus,.form-subscribe input[type="date"]:focus,.form-subscribe textarea:focus{border-color:#19191C;outline:1px solid #19191C}.form-subscribe input[type="checkbox"]{padding:0;height:initial;width:initial;margin-bottom:0;display:none;cursor:pointer}.form-subscribe label{display:block;font-size:13px;line-height:1.54;position:relative;cursor:pointer;padding:0 0 0 30px}@media (min-width: 768px){.form-subscribe label{padding:0 0 0 26px}}.form-subscribe label:hover:before{box-shadow:inset 0 0 2px rgba(107,87,255,0.2)}.form-subscribe label:before{content:"";position:absolute;top:2px;left:3px;-webkit-appearance:none;background:#fff;border:1px solid #a3a3a4;cursor:pointer;width:14px;height:14px}.form-subscribe label a{position:relative;display:inline-block;vertical-align:middle}.form-subscribe label a:hover{box-shadow:inset 0 -1px 0 #19191c}.form-subscribe label a i{font-size:12px;position:absolute;top:4px;right:-18px}.form-subscribe input[type="checkbox"]:not(:checked)+label:hover:after{content:"";position:absolute;top:-1px;left:0px;background:rgba(107,87,255,0.2);border-radius:2px;width:20px;height:20px;z-index:-1}.form-subscribe input[type="checkbox"]:checked+label:before{background:#6b57ff;border-color:#6b57ff}.form-subscribe input[type="checkbox"]:checked+label:after{content:"";display:block;position:absolute;top:4px;left:8px;width:5px;height:8px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}.form-subscribe .tooltip{font-size:13px;line-height:1.54;letter-spacing:0.0045em;position:absolute;top:100%;left:28px;right:0;border:1px solid rgba(255,255,255,0.1);background:#303033;box-shadow:0px 6px 12px rgba(0,0,0,0.1);border-radius:4px;color:#fff;z-index:99;padding:8px 6px 6px 8px;margin-top:5px;display:none}@media (min-width: 768px){.form-subscribe .tooltip{right:auto;max-width:380px;width:100%}}.form-subscribe .tooltip p{margin:0}.form-subscribe .tooltip p a{color:#fff;border-bottom:1px solid #fff}.form-subscribe .tooltip p a:hover{border-color:#fff;box-shadow:inset 0 -1px 0 #fff}.follow h4{font-size:16px;line-height:1.5;margin:0 0 8px}.select-row{margin:0 0 32px}@media (min-width: 481px){.select-row{display:flex;flex-wrap:wrap}}@media (max-width: 767px){.select-row .select{width:100%;margin:0 0 16px}}@media (min-width: 481px){.select-row .select{width:calc(50% - 8px)}}@media (min-width: 769px){.select-row .select{width:calc(50% - 16px)}}@media (min-width: 1025px){.select-row .select{width:calc(33.332% - 21px)}}@media (min-width: 1281px){.select-row .select{width:calc(25% - 24px)}}@media (min-width: 481px){.select-row .select+.select{margin:0 0 0 16px}}@media (min-width: 769px){.select-row .select+.select{margin:0 0 0 32px}}@media (max-width: 767px){.select-row .select:only-child{width:100%}}select{-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;appearance:none;outline:0;box-shadow:none;border:1px solid rgba(39,40,44,0.15);background-image:none}select:focus{border-color:#19191C}select::-ms-expand{display:none}select{flex:1;padding:8px 48px 8px 17px;cursor:pointer}.select{position:relative;display:flex}.custom-select-container{width:100%}.custom-select-container:after{content:"\e910";font-family:"icomoon";position:absolute;top:3px;right:8px;font-size:24px;cursor:pointer;pointer-events:none}.custom-select-container.is-open .custom-select-opener{border-color:#19191C}.custom-select-container.is-open .custom-select-panel{border:1px solid #d1d1d2;max-height:202px}.custom-select-opener{transition:border-color .15s ease-in-out;background:#fff;padding:7px;border:1px solid rgba(25,25,28,0.3)}.custom-select-opener:hover{border-color:rgba(25,25,28,0.5)}.custom-select-panel{transition:none;top:calc(100% + 8px);background:#fff}.custom-select-option{cursor:pointer}.custom-select-option.is-selected{background:#19191C;color:#fff}.custom-select-option.is-selected:before{display:none}.custom-select-option.is-selected.has-focus{background:#19191C}.custom-select-option.has-focus{background:rgba(25,25,28,0.1)}.scrollUp .menu{transform:translate3d(0, -100%, 0)}.page-not-found{padding:60px 0}.page-not-found .container{max-width:800px}.page-not-found form{position:relative;display:flex;flex-wrap:wrap;justify-content:space-between}.page-not-found input[type="text"]{width:100%;height:40px;padding:5px 15px;margin:0 0 16px}@media (min-width: 769px){.page-not-found input[type="text"]{width:calc(100% - 118px);margin:0}}.page-not-found input[type="submit"]{border:none;outline:none;border-radius:2em;color:#fff;background:#167dff;padding:8px 24px}.disabled{pointer-events:none}.buttons__row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;margin:0 0 16px}@media (min-width: 769px){.buttons__row{margin:0 0 24px}}.buttons .btn{margin:0 25px 0 0}.buttons .btn:only-child{margin:0}.buttons .btn--transparent{border:1px solid rgba(25,25,28,0.3);background:transparent;color:#19191c}.buttons .btn--transparent:hover{background:rgba(25,25,28,0.1);border-color:rgba(25,25,28,0.4)}.fake-hash{position:absolute;top:-9999px;left:-9999px;opacity:0;visibility:hidden}
+
+/*# sourceMappingURL=app.min.css.map*/    </style>
+    <script>
+        var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights@2.0.2";
+
+        !function(e,a,t,n,s,i,c){e.AlgoliaAnalyticsObject=s,e[s]=e[s]||function(){
+        (e[s].queue=e[s].queue||[]).push(arguments)},i=a.createElement(t),c=a.getElementsByTagName(t)[0],
+        i.async=1,i.src=n,c.parentNode.insertBefore(i,c)
+        }(window,document,"script",ALGOLIA_INSIGHTS_SRC,"aa");
+    </script>
+    <link rel="icon" href="https://blog.jetbrains.com/wp-content/themes/jetbrains/assets/img/favicons/favicon.ico" sizes="any"><!-- 32×32 -->
+    <link rel="icon" href="https://blog.jetbrains.com/wp-content/themes/jetbrains/assets/img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="https://blog.jetbrains.com/wp-content/themes/jetbrains/assets/img/favicons/apple-touch-icon.png"><!-- 180×180 -->
+    <link rel="manifest" href="https://blog.jetbrains.com/wp-content/themes/jetbrains/assets/img/favicons/site.webmanifest">
+
+    <meta name="apple-mobile-web-app-title" content="JetBrains Blog">
+    <meta name="application-name" content="JetBrains Blog">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <meta name='robots' content='max-image-preview:large' />
+<link rel="alternate" hreflang="en" href="https://blog.jetbrains.com/dotnet/2023/02/03/rider-2023-1-eap-3/" />
+<link rel="alternate" hreflang="x-default" href="https://blog.jetbrains.com/dotnet/2023/02/03/rider-2023-1-eap-3/" />
+<link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<link rel='stylesheet' id='pb-accordion-blocks-style-css'  href='https://blog.jetbrains.com/wp-content/plugins/accordion-blocks/build/index.css?ver=1679448953' type='text/css' media='all' />
+<link rel='stylesheet' id='ppress-frontend-css'  href='https://blog.jetbrains.com/wp-content/plugins/wp-user-avatar/assets/css/frontend.min.css?ver=4.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='ppress-flatpickr-css'  href='https://blog.jetbrains.com/wp-content/plugins/wp-user-avatar/assets/flatpickr/flatpickr.min.css?ver=4.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='ppress-select2-css'  href='https://blog.jetbrains.com/wp-content/plugins/wp-user-avatar/assets/select2/select2.min.css?ver=e138ef45bff209668d39d296de5c7b40' type='text/css' media='all' />
+<link rel='stylesheet' id='cms-navigation-style-base-css'  href='https://blog.jetbrains.com/wp-content/plugins/wpml-cms-nav/res/css/cms-navigation-base.css?ver=1.5.5' type='text/css' media='screen' />
+<link rel='stylesheet' id='cms-navigation-style-css'  href='https://blog.jetbrains.com/wp-content/plugins/wpml-cms-nav/res/css/cms-navigation.css?ver=1.5.5' type='text/css' media='screen' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=4.7.0' type='text/css' media='all' />
+<link rel='stylesheet' id='enlighterjs-css'  href='https://blog.jetbrains.com/wp-content/plugins/enlighter/cache/enlighterjs.min.css?ver=1xeD0E9ltABXgL+' type='text/css' media='all' />
+<link rel='stylesheet' id='icomoon_font-css'  href='https://blog.jetbrains.com/wp-content/themes/jetbrains/assets/dist/icomoon_font.min.css?ver=2.1.4' type='text/css' media='all' />
+<link rel='stylesheet' id='font-jetbrains-mono-css'  href='https://blog.jetbrains.com/wp-content/themes/jetbrains/assets/dist/fontjetbrainsmono.min.css?ver=2.1.4' type='text/css' media='all' />
+<link rel='stylesheet' id='single-post-css'  href='https://blog.jetbrains.com/wp-content/themes/jetbrains/assets/dist/singlepost.min.css?ver=2.1.4' type='text/css' media='all' />
+<!--Style Sheet-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type='text/javascript' src='https://blog.jetbrains.com/wp-content/themes/jetbrains/assets/jquery/jquery.min.js' id='jquery-js'></script>
+<script type='text/javascript' id='wpml-cookie-js-extra'>
+/* <![CDATA[ */
+var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":"\/"}};
+var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":"\/"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://blog.jetbrains.com/wp-content/plugins/sitepress-multilingual-cms/res/js/cookies/language-cookie.js?ver=4.5.2' id='wpml-cookie-js'></script>
+<script type='text/javascript' src='https://blog.jetbrains.com/wp-content/plugins/wp-user-avatar/assets/flatpickr/flatpickr.min.js?ver=4.3.2' id='ppress-flatpickr-js'></script>
+<script type='text/javascript' src='https://blog.jetbrains.com/wp-content/plugins/wp-user-avatar/assets/select2/select2.min.js?ver=4.3.2' id='ppress-select2-js'></script>
+<link rel="https://api.w.org/" href="https://blog.jetbrains.com/wp-json/" /><link rel="alternate" type="application/json" href="https://blog.jetbrains.com/wp-json/wp/v2/dotnet/320823" /><link rel='shortlink' href='https://blog.jetbrains.com/?p=320823/' />
+<link rel="alternate" type="application/json+oembed" href="https://blog.jetbrains.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblog.jetbrains.com%2Fdotnet%2F2023%2F02%2F03%2Frider-2023-1-eap-3%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://blog.jetbrains.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblog.jetbrains.com%2Fdotnet%2F2023%2F02%2F03%2Frider-2023-1-eap-3%2F&#038;format=xml" />
+<meta name="generator" content="WPML ver:4.5.2 stt:60,9,1,4,3,28,29,43,46,2,54;" />
+
+                    <meta property="og:locale" content="en_US"/>
+                            <meta property="og:site_name" content="The JetBrains Blog"/>
+                            <meta property="og:title" content="Rider 2023.1 EAP 3 is Available With Docker and Structure View Improvements and a Localization Preview  | The .NET Tools Blog"/>
+                            <meta property="og:url" content="https://blog.jetbrains.com/dotnet/2023/02/03/rider-2023-1-eap-3/"/>
+                            <meta property="og:image" content="https://blog.jetbrains.com/wp-content/uploads/2023/02/RD_231_EAP_Twitter_1200x675-1.png"/>
+                        <meta property="og:type" content="website"/>
+        <meta property="og:description" content="The third EAP build is available for download!&nbsp;
+
+
+
+Let’s go over this build’s feature highlights:&nbsp;
+
+
+
+
+
+
+
+Structure view
+
+
+
+Rider 2023.1 EAP 3 comes packed with improvements and fixes for co"/>
+        <!-- Google+ / Schema.org -->
+                    <meta itemprop="name" content="Rider 2023.1 EAP 3 is Available With Docker and Structure View Improvements and a Localization Preview  | The .NET Tools Blog"/>
+                            <meta itemprop="headline" content="Rider 2023.1 EAP 3 is Available With Docker and Structure View Improvements and a Localization Preview  | The .NET Tools Blog"/>
+                            <meta itemprop="image" content="https://blog.jetbrains.com/wp-content/uploads/2023/02/RD_231_EAP_Twitter_1200x675-1.png"/>
+                <meta itemprop="description" content="The third EAP build is available for download!&nbsp;
+
+
+
+Let’s go over this build’s feature highlights:&nbsp;
+
+
+
+
+
+
+
+Structure view
+
+
+
+Rider 2023.1 EAP 3 comes packed with improvements and fixes for co"/>
+                <meta name="image" content="https://blog.jetbrains.com/wp-content/uploads/2023/02/RD_231_EAP_Twitter_1200x675-1.png"/>
+                <!-- Twitter Cards -->
+                <meta name="twitter:title" content="Rider 2023.1 EAP 3 is Available With Docker and Structure View Improvements and a Localization Preview  | The .NET Tools Blog"/>
+                <meta name="twitter:url" content="https://blog.jetbrains.com/dotnet/2023/02/03/rider-2023-1-eap-3/"/>
+                <meta name="twitter:creator" content="@resharper"/>
+                <meta name="twitter:site" content="@resharper"/>
+                <meta name="twitter:image:src" content="https://blog.jetbrains.com/wp-content/uploads/2023/02/RD_231_EAP_Twitter_1200x675-1.png"/>
+                <meta name="twitter:description" content="The third EAP build is available for download!&nbsp;
+
+
+
+Let’s go over this build’s feature highlights:&nbsp;
+
+
+
+
+
+
+
+Structure view
+
+
+
+Rider 2023.1 EAP 3 comes packed with improvements and fixes for co"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+
+    <meta name="description" content="The third EAP build is available for download!&nbsp;
+
+
+
+Let’s go over this build’s feature highlights:&nbsp;
+
+
+
+
+
+
+
+Structure view
+
+
+
+Rider 2023.1 EAP 3 comes packed with improvements and fixes for co"><link rel="icon" href="https://blog.jetbrains.com/wp-content/uploads/2023/02/cropped-icon-512-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://blog.jetbrains.com/wp-content/uploads/2023/02/cropped-icon-512-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://blog.jetbrains.com/wp-content/uploads/2023/02/cropped-icon-512-180x180.png" />
+<meta name="msapplication-TileImage" content="https://blog.jetbrains.com/wp-content/uploads/2023/02/cropped-icon-512-270x270.png" />
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5P98');</script>
+<!-- End Google Tag Manager -->
+
+		<style type="text/css" id="wp-custom-css">
+			/* blog.jetbrains.com-theme/blob/master/custom.css */
+
+#extendify-templates-inserter {
+	display: none !important; 
+}
+
+.enlighter-k3{
+	background-color: transparent !important;
+}
+
+.enlighter-t-enlighter div.enlighter>div.enlighter-special{
+	background-color: #FFEBCC;
+}
+
+a[href*="/tag/newsletter"],
+a[href*="/tag/newsletter"],
+a[href*="/tag/how2pro"],
+a[href*="/tag/sendtoall"],
+a[href*="/tag/newsletter-resharper"],
+a[href*="/tag/newsletter-rider"],
+a[href*="/tag/newsletter-cpp"],
+a[href*="/tag/newsletter-rust"],
+a[href*="/webstorm/tag/digest"],
+a[href*="/category/uncategorized"],
+a[href*="/category/newsletter"],a[href*="/category/java-annotated"],a[href*="/tag/news-company/"],a[href*="/tag/major-news/"],
+a[href*="/category/newsletter"],
+a[href*="/category/how2pro"],
+a[href*="/category/sendtoall"],
+a[href*="/category/newsletter-resharper"],
+a[href*="/category/newsletter-rider"],
+a[href*="/category/newsletter-cpp"],
+a[href*="/category/newsletter-rust"] {
+	display: none !important;
+}
+
+#wrapper > main > section.promo div.promo__text > a.tag {
+	display: none !important;
+}
+
+table, th, td {
+  border: 1px solid rgba(50,50,93,.1);
+  border-collapse: collapse;
+  padding: 8px;
+}
+
+.wp-block-image figcaption {
+    font-size: .7em;
+    margin-top: .5em;
+    margin-bottom: 1em;
+    text-align: center;
+    font-style: italic;
+}
+
+div.content>p[data-nosnippet] {
+    font-size: 80%;
+}
+
+blockquote,
+blockquote.wp-block-quote {
+	font-size: 100%;
+	line-height: 1.5;
+	margin: 32px 0px;
+	padding: 0px 18px;
+	border-left: 2px solid rgba(0, 0, 0, 0.12);
+}
+
+figure.wp-block-embed.is-type-video .wp-block-embed__wrapper, figure.wp-block-embed.is-type-video .wp-block-embed__wrapper {
+position: relative;
+width: 100%;
+height: 0;
+padding-bottom: 56.25%;
+}
+
+div.card__header > h3 {
+	font-size:18px !important;
+}
+
+.navbar h3 {
+	font-size:20px !important;
+}
+
+h2, h3, h4, h5 {
+	margin-top: 20px;
+}
+
+h4, h5 {
+	font-size: 20px !important;
+}
+
+figure.wp-block-embed.is-type-video iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+
+div.content > ul > li > img {
+	margin: 0.5em 0;
+}
+
+.alignright {
+   float: right;
+}
+
+.wp-block-video {
+    margin: 0 0 1em !important;
+}
+
+video {
+	max-width: 100%;
+}
+
+.copy-heading {
+    margin-top: 20px;
+}
+		</style>
+		    <link rel="alternate" type="application/rss+xml" title="The .NET Tools Blog : Essential productivity kit for .NET developers | The JetBrains Blog" href="https://blog.jetbrains.com/dotnet/feed/">
+</head>
+
+
+<body class="dotnet-template-default single single-dotnet postid-320823 wp-embed-responsive"><!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5P98"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<div id="wrapper">
+    <header class="header">
+        <div class="container">
+            <strong class="logo">
+                <a href="https://blog.jetbrains.com/">
+                <img src="https://blog.jetbrains.com/wp-content/uploads/2023/01/logo-9-1.svg" alt="The JetBrains Blog">
+                <p>Blog</p></a>
+            </strong>
+            
+            <ul class="menu-list">
+                <li><a href="#" class="nav-opener"><span class="mobile-hidden">Blogs by Topic</span></a></li>
+                <li><a href="https://blog.jetbrains.com/search/"><i class="fa fa-search"></i></a></li>
+            </ul>
+            <a href="#" class="burger-icon"><span></span></a>
+            <nav class="navbar">
+                <div class="container">
+
+                    <ul class="row"><li id="menu-item-118356" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-118356">
+                    <ul class="sub-menu"><li id="menu-item-284" class="columns menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-284"><h3>IDEs</h3>
+            	    <ul class="sub-menu"><li id="menu-item-285" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-285"><a title="AppCode Blog" href="/appcode/"><span>AppCode</span></a></li>
+            		    <li id="menu-item-286" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-286"><a title="CLion Blog" href="/clion/"><span>CLion</span></a></li>
+		                <li id="menu-item-287" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-287"><a title="DataGrip Blog" href="/datagrip/"><span>DataGrip</span></a></li>
+		                <li id="menu-item-231265" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-231265"><a href="/dataspell/"><span>DataSpell</span></a></li>
+		                <li id="menu-item-217910" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-217910"><a href="/fleet/"><span>Fleet</span></a></li>
+		                <li id="menu-item-288" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-288"><a title="GoLand Blog" href="/go/"><span>GoLand</span></a></li>
+		                <li id="menu-item-289" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-289"><a title="IntelliJ IDEA Blog" href="/idea/"><span>IntelliJ IDEA</span></a></li>
+		                <li id="menu-item-291" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-291"><a title="PhpStorm Blog" href="/phpstorm/"><span>PhpStorm</span></a></li>
+		                <li id="menu-item-292" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-292"><a title="PyCharm Blog" href="/pycharm/"><span>PyCharm</span></a></li>
+		                <li id="menu-item-293" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-293"><a title="Rider Blog" href="/dotnet/tag/rider/"><span>Rider</span></a></li>
+		                <li id="menu-item-294" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-294"><a title="RubyMine Blog" href="/ruby/"><span>RubyMine</span></a></li>
+		                <li id="menu-item-296" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-296"><a title="WebStorm Blog" href="/webstorm/"><span>WebStorm</span></a></li>
+	                </ul>
+                    </li>
+                    </ul>
+                    </li>
+                    <li id="menu-item-155083" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-155083">
+                    <ul class="sub-menu">
+	                <li id="menu-item-155084" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-155084"><h3>Plugins &#038; Services</h3>
+                	<ul class="sub-menu">
+		            <li id="menu-item-126770" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-126770"><a href="/big-data-tools/"><span>Big Data Tools</span></a></li>
+		            <li id="menu-item-136584" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-136584"><a href="https://blog.jetbrains.com/blog/tag/codewithme/"><span>Code With Me</span></a></li>
+		            <li id="menu-item-170477" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-170477"><a href="/qa/"><span>Quality Assurance</span></a></li>
+		            <li id="menu-item-310" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-310"><a title="JetBrains Platform Blog" href="/platform/"><span>JetBrains Platform</span></a></li>
+		            <li id="menu-item-155027" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-155027"><a href="/rust/"><span>Rust</span></a></li>
+		            <li id="menu-item-123129" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-123129"><a href="/scala/"><span>Scala</span></a></li>
+		            <li id="menu-item-295" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-295"><a title="Toolbox App Blog" href="/toolbox-app/"><span>Toolbox App</span></a></li>
+		            <li id="menu-item-268151" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-268151"><a href="/writerside/"><span>Writerside</span></a></li>
+	                </ul>
+                    </li>
+                    </ul>
+                    </li>
+                    <li id="menu-item-118358" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-118358">
+                <ul class="sub-menu">
+	                <li id="menu-item-305" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-305"><h3>Team Tools</h3>
+	            <ul class="sub-menu">
+		            <li id="menu-item-65109" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65109"><a href="/datalore/"><span>Datalore</span></a></li>
+		            <li id="menu-item-753" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-753"><a title="JetBrains Space Blog" href="/space/"><span>Space</span></a></li>
+		            <li id="menu-item-306" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-306"><a title="TeamCity Blog" href="/teamcity/"><span>TeamCity</span></a></li>
+		            <li id="menu-item-307" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-307"><a title="Upsource Blog" href="/upsource/"><span>Upsource</span></a></li>
+		            <li id="menu-item-308" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-308"><a title="YouTrack Blog" href="/youtrack/"><span>YouTrack</span></a></li>
+		            <li id="menu-item-309" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-309"><a title="Hub Blog" href="/hub/"><span>Hub</span></a></li>
+		            <li id="menu-item-165129" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-165129"><a href="/qodana/"><span>Qodana</span></a></li>
+	            </ul>
+                </li>
+                </ul>
+                </li>
+                    <li id="menu-item-118357" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-118357">
+                <ul class="sub-menu">
+	                <li id="menu-item-297" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-297"><h3>.NET &#038; Visual Studio</h3>
+	            <ul class="sub-menu">
+		            <li id="menu-item-304" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-304"><a title=".NET Tools" href="/dotnet/"><span>.NET Tools</span></a></li>
+		            <li id="menu-item-300" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-300"><a title="ReSharper C++ Blog" href="/rscpp/"><span>ReSharper C++</span></a></li>
+	            </ul>
+                </li>
+	                <li id="menu-item-63316" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-63316"><h3>Languages &#038; Frameworks</h3>
+	            <ul class="sub-menu">
+		            <li id="menu-item-311" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-311"><a title="Kotlin Blog" href="/kotlin/"><span>Kotlin</span></a></li>
+		            <li id="menu-item-63315" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-63315"><a href="/ktor/"><span>Ktor</span></a></li>
+		            <li id="menu-item-290" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-290"><a title="MPS Blog" href="/mps/"><span>MPS</span></a></li>
+            	</ul>
+                </li>
+                </ul>
+                </li>
+                    <li id="menu-item-118359" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-118359">
+                <ul class="sub-menu">
+	                <li id="menu-item-63314" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-63314"><h3>Education &#038; Research</h3>
+	            <ul class="sub-menu">
+		            <li id="menu-item-118360" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-118360"><a href="/education/"><span>Edu Products</span></a></li>
+		            <li id="menu-item-285585" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-285585"><a href="/research/"><span>Research</span></a></li>
+	                </ul>
+                    </li>
+	                <li id="menu-item-312" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-312"><h3>Company</h3>
+	            <ul class="sub-menu">
+		            <li id="menu-item-313" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-313"><a title="JetBrains Company Blog" href="/blog/"><span>Company Blog</span></a></li>
+		            <li id="menu-item-227873" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-227873"><a href="/security/"><span>Security</span></a></li>
+	            </ul>
+                </li>
+                </ul>
+                </li>
+                </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+<main>
+    <div class="top-page">
+    <div class="container">
+        <div class="top-page__row">
+            <div class="top-page__head">
+                    <a href="https://blog.jetbrains.com/dotnet/">
+                        <img src="https://blog.jetbrains.com/wp-content/uploads/2019/01/dotUltimate_icon.svg" alt="Dotnet logo">
+                    </a>
+            <div class="text-container">
+                    <a href="https://blog.jetbrains.com/dotnet/">
+                        <h2>The .NET Tools Blog</h2>
+                        <p>Essential productivity kit for .NET developers</p>
+                    </a>
+                </div>
+            </div>
+            <div class="top-page__right">
+                <a href="#" class="social-opener">Follow</a>
+                <ul class="social">
+                <!--Lang Selection-->
+                    <li><span>Lang: </span></li>
+                    <li><a href="rider-2023-1-eap-3_en.html"> <img src="flag-en.png" alt="English" width="25" height="35"/> </a></li>
+                    <li><a href="rider-2023-1-eap-3_zh.html"> <img src="flag-zh.png" alt="Traditional Chinese" width="25" height="35"/> </a></li>
+                    <li><a href="rider-2023-1-eap-3_cn.html"> <img src="flag-cn.png" alt="Simplified Chinese" width="25" height="35"/> </a></li>
+                    <li><a href="rider-2023-1-eap-3_de.html"> <img src="flag-de.png" alt="German"  width="25" height="35"/> </a></li>
+                    <li><span>Follow .NET Tools:</span></li>
+                   <li><a href="https://www.jetbrains.com/dotnet/guide/" target="_blank"><i class="fa fa-share"></i> <span>share</span></a></li>
+                   <li><a href="https://blog.jetbrains.com/dotnet/feed/" target="_blank"><i class="fa fa-rss"></i> <span>RSS</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="top-page__mobile">
+                <div class="top-page__mobile-col">
+                    <a href="https://www.jetbrains.com/dotnet/" class="btn">Get Tools</a>
+                </div>
+                <div class="top-page__mobile-col">
+                    <a href="#" class="social-opener">Follow</a>
+                    <ul class="social">
+                        <li><span>Follow .NET Tools:</span></li>
+                        <li><a href="https://www.jetbrains.com/dotnet/guide/" target="_blank"><i class="icon-share"></i> <span>share</span></a></li>
+                        <li><a href="https://blog.jetbrains.com/dotnet/feed/" target="_blank"><i class="icon-rss-feed"></i> <span>RSS</span></a></li>
+                    </ul>
+                </div>
+        </div>
+        <div class="menu">
+            <span class="menu__border"></span>
+                <nav class="menu__nav">
+                    <ul class="menu__nav-list">
+                        <li><a href="/dotnet/" class="curent_tax" >All</a></li>
+                        <li><a href="/dotnet/category/how-tos/" >How-To's</a></li>
+                        <li><a href="/dotnet/category/releases/" >Releases</a></li>
+                        <li><a href="/dotnet/category/webinars/" >Webinars</a></li>
+                        <li><a href="/dotnet/category/events/" >Events</a></li>
+                        <li><a href="/dotnet/tag/net-annotated/" >.NET Annotated</a></li>
+                        <li><a href="/dotnet/tag/rider/" >Rider</a></li>
+                        <li><a href="/dotnet/tag/resharper/" >ReSharper</a></li>
+                    </ul>
+                </nav>
+                <div class="menu__right">
+                    <a href="https://www.jetbrains.com/dotnet/" class="btn">Get Tools</a>
+                </div>
+        </div>
+    </div>
+</div>
+<section class="article-section" data-clarity-region="article">
+    <div class="content">
+			<a href="/dotnet/category/net-tools/" class="tag">.NET Tools</a>
+			<a href="/dotnet/category/news/" class="tag">News</a>
+			<a href="/dotnet/category/rider/" class="tag">Rider</a>
+            <h1 id="major-updates">Rider 2023.1 EAP 3 现已推出，增强了Docker和结构视图，并提供本地化预览 </h1>                    
+            <div class="author-post">
+            <div class="author-post__info">
+            <div class="author-post__info-avatars">
+                   <img src="https://blog.jetbrains.com/wp-content/uploads/2022/07/F34E0F9B-D3F0-4DD4-B7C7-B11AF3FC6D25-200x200.jpeg" width="200" height="200" alt="Sasha Ivanova" loading="lazy"  class="avatar">
+            </div>
+            <div class="author-post__text">
+            <div class="author-post__text-title">
+                    <a href="https://blog.jetbrains.com/author/sasha-ivanova-jetbrains-com">Sasha Ivanova</a>
+            </div>
+            <time class="publish-date" data-year="2023" data-month="02" data-day="03" datetime="2023-02-03"></time>
+            </div>
+            </div>
+    </div>
+                    
+<p>The third EAP build is available for <a href="https://www.jetbrains.com/rider/nextversion/">download</a>!&nbsp;</p>
+
+
+
+<p>Let’s go over this build’s feature highlights:&nbsp;</p>
+
+
+
+<figure class="wp-block-image size-full"><img src="https://blog.jetbrains.com/wp-content/uploads/2023/02/RD_231_EAP_Twitter_1200x675.png" alt="" class="wp-image-320943"/></figure>
+
+
+
+<h2>Structure view</h2>
+
+
+
+<p>Rider 2023.1 EAP 3 comes packed with improvements and fixes for code navigation. Rider now shows inherited members in the <em>Structure</em> view toolwindow, and we’ve restored Rider’s ability to display the class members of decompiled code in the <em>Structure</em> view.&nbsp;</p>
+
+
+    <div class="slider slider-full">
+        <div class="slider__slide">
+            <a href="https://blog.jetbrains.com/wp-content/uploads/2023/02/Rider_Structure_Inherited-Members.png">
+            <img src="https://blog.jetbrains.com/wp-content/uploads/2023/02/Rider_Structure_Inherited-Members.png" alt="">
+            </a>
+        </div>
+        <div class="slider__slide">
+            <a href="https://blog.jetbrains.com/wp-content/uploads/2023/02/Rider_Structure_Decompiled-code.png">
+            <img src="https://blog.jetbrains.com/wp-content/uploads/2023/02/Rider_Structure_Decompiled-code.png" alt="">
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+
+<p>Starting with this EAP build, Rider will now use <a href="https://www.jetbrains.com/help/idea/navigating-through-the-source-code.html#method_navigation">IntelliJ IDEA’s Structure view popup</a> when the <a href="https://www.jetbrains.com/help/rider/Navigation_and_Search__Go_to_File_Member.html"><em>Go to File Member</em></a> command is initiated. This will enable the IDE to show the structure of a file and allow it to show symbols from compiled base types. We’ve also implemented grouping inside the popup, so you can tell where each item is located at a glance.&nbsp;</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="1200" height="690" src="https://blog.jetbrains.com/wp-content/uploads/2023/02/Rider_Structure_Structure-pop-up.png" alt="" class="wp-image-320851"/></figure>
+
+
+
+<h2>Docker</h2>
+
+
+
+<p>Starting with the 2023.1 EAP 3 build, Rider is able to generate DockerFile run configurations whenever there’s a DockerfileFile project property specified or a Docker profile included in the <code>launchSettings.json</code> file.</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="1200" height="1073" src="https://blog.jetbrains.com/wp-content/uploads/2023/02/Rider_Docker_Autogen_LaunchSettings.png" alt="" class="wp-image-320862"/></figure>
+
+
+
+<p>Rider will use the following MSBuild properties from the <code>.csproj file</code> to generate the run configuration: <code>DockerfileContext</code>, <code>DockerfileBuildArguments</code>, <code>DockerfileRunArguments</code>, <code>DockerfileTag</code>, and <code>ContainerDevelopmentMode</code>. Additional customization can be achieved by specifying<code> httpPort</code>, <code>sslPort</code>, <code>publishAllPorts</code>, and <code>useSSL</code> properties in the launch settings profile.&nbsp;</p>
+
+
+
+<h2>Code editing</h2>
+
+
+
+<p>The code editor inside Rider will now render color and brush previews for the values and references inside Avalonia XAML (.axaml) and C#&nbsp; files, just like it does for WPF applications.</p>
+
+
+
+<h2>Localization</h2>
+
+
+
+<p>Rider 2023.1 EAP 3 unveils the first stage of localization into Chinese, Korean, and Japanese! You will get a partially localized UI, code inspections, an Alt+Enter menu, tool windows, and notifications, including those for Unity and Unreal Engine support.&nbsp;</p>
+
+
+
+<figure class="wp-block-image"><img src="https://lh6.googleusercontent.com/2TV0g1B0OVuMQdKcHYpxql_AhoA6PMUJSqsXh_vrP6on0W6-wQRpKBTyWOAjueZEHqTQt-M-817PVe4ztnYz5G4_RLoARBasARB3JmVCpj7nS1ONR6QNjfRvbiGwfAHwfJkpRBmuY72nVkmEzLO8TR8" alt=""/></figure>
+
+
+
+<p>To localize your IDE, go to<em> Settings/Preferences | Plugins</em> and search the Marketplace for a language pack plugin in your desired language. Install the plugin and restart the IDE to apply the changes. Alternatively, you can download a <a href="https://plugins.jetbrains.com/plugin/13710-chinese-simplified-language-pack----">Chinese</a>, <a href="https://plugins.jetbrains.com/plugin/13711-korean-language-pack------">Korean</a>, or <a href="https://plugins.jetbrains.com/plugin/13964-japanese-language-pack------">Japanese</a> language pack plugin from the JetBrains Marketplace website and install it by going to <em>Settings/Preferences | Plugins | &#x2699;&#xfe0f;| “Install Plugin from Disk”.</em></p>
+
+
+
+<p><em>For the full list of resolved issues, please refer to </em><a href="https://youtrack.jetbrains.com/issues?q=project:%20Rider%20Available%20in:%20%7B2023.1%20EAP%203*%7D" title="https://youtrack.jetbrains.com/issues?q=project:%20Rider%20Available%20in:%20%7B2023.1%20EAP%201%7D"><em>our issue tracker</em></a>.</p>
+
+
+
+<p></p>
+
+
+
+<p>That’s it for now! We can’t wait to hear your feedback in the comments below or on social media.&nbsp;</p>
+                    <div class="content__row">
+                        	<div class="tag-list">
+                                <a href="/dotnet/tag/docker/" class="tag">Docker</a>
+                                <a href="/dotnet/tag/eap/" class="tag">EAP</a>
+                                <a href="/dotnet/tag/localization/" class="tag">localization</a>
+                                <a href="/dotnet/tag/rider/" class="tag">Rider</a>
+                            </div>
+                        <ul class="social">
+                            <li><span>Share</span></li>
+                            <li><a target="_blank" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fblog.jetbrains.com%2Fdotnet%2F2023%2F02%2F03%2Frider-2023-1-eap-3%2F?facebook_en_US" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a></li>
+                            <li><a target="_blank" href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fblog.jetbrains.com%2Fdotnet%2F2023%2F02%2F03%2Frider-2023-1-eap-3%2F&text=https%3A%2F%2Fblog.jetbrains.com%2Fdotnet%2F2023%2F02%2F03%2Frider-2023-1-eap-3%2F&via=resharper?twitter_en_US" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a></li>
+                            <li><a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fblog.jetbrains.com%2Fdotnet%2F2023%2F02%2F03%2Frider-2023-1-eap-3%2F?linkedin_en_US" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="content__pagination"><a class="content__pagination-prev" href="https://blog.jetbrains.com/dotnet/2023/02/03/resharper-2023-1-eap-3/" ><i class="fa fa-arrow-left"></i> ReSharper 2023.1 EAP 3 Is Here!</a><a class="content__pagination-next" href="https://blog.jetbrains.com/dotnet/2023/02/06/introducing-the-rider-localization-eap-for-chinese-japanese-and-korean/" ><i class="fa fa4-arrow-right"></i> Introducing the Rider Localization EAP for Chinese, Japanese, and Korean</a></div>
+                        <div class="form-subscribe">
+                        <h4>Subscribe to Blog updates</h4>
+                        <form action="#" class="form-subscribe__form js-form-subscribe__form">
+                            <input type="hidden" name="formid" value="2741">
+                            <input type="hidden" name="dotNetBlog" value="true">
+                            <input type="hidden" name="subscriptionTopicWelcomeEmail" value="dotNet Blog">
+                            <div class="form-subscribe__group-input">
+                                <input type="email" placeholder="Your email" name="Email">
+                                <button type="submit"><i class="fa fa-arrow-right"></i></button>
+                            </div>
+                            <div class="form-subscribe__group-checkbox">
+                                <input type="checkbox" id="checkbox" name="privacyConsent">
+                                <label for="checkbox">By submitting this form, I agree to the JetBrains <a href="https://www.jetbrains.com/company/privacy.html" class="tooltip-opener">Privacy Policy <i class="fa fa-info-circle" aria-hidden="true"></i></a></label>
+                                <div class="tooltip">
+                                    <p>通過提交此表單，我同意JetBrains s.r.o.（"JetBrains"）可以使用我的姓名、電子郵件地址和位置數據向我發送包括商業通訊在內的通訊，以及為此目的處理我的個人數據。我同意JetBrains可能根據<a href="https://www.jetbrains.com/company/privacy.html" target="_blank">JetBrains隱私政策</a>的規定，使用<a href="https://www.jetbrains.com/legal/privacy/third-parties.html">第三方</a>服務來處理上述數據用於此目的。我了解我可以隨時在<a href="https://account.jetbrains.com/profile-details/privacy" target="_blank">我的個人資料中</a>撤銷此同意。此外，每封電子郵件中都包含一個取消訂閱鏈接。</p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="form_massage" style="display: none"><p>Thanks, we've got you!</p></div>
+                </div>
+                <a href="#" class="toc-opener"></a>
+                <div id="toc"></div>
+                <div class="container comments-container">
+                    
+                    <div class="content">
+                        <div id="remark42"></div>
+                    </div>
+                </div>
+</section>
+<div class="section light-gray-bg">
+    <div class="container">
+        <div class="section__head">
+            <h2>Discover more</h2>
+        </div>
+    <div class="row">
+        <div class="col" post_id="325054">
+            <a class="card img-visible" href="https://blog.jetbrains.com/dotnet/2023/03/20/why-is-resharper-suggesting-this/">
+            <img width="2560" height="1200" src="https://blog.jetbrains.com/wp-content/uploads/2023/02/rs-how-tos-blog-featured-image-1280x600-1-3.png" class="attachment-full size-full wp-post-image" alt="Why is Resharper suggesting this?" loading="lazy" sizes="(max-width: 768px) 768px , 525px" />        <div class="card__header">
+            <time class="publish-date" data-year="2023" data-month="03" data-day="20" datetime="2023-03-20"></time>
+            <h3>Why is ReSharper suggesting this?</h3>        </div>
+        <div class="card__body">
+            <p>Regular feedback we hear from the ReSharper community is how helpful it has been in learning the latest features of .NET. ReSharper is the pair-programming buddy you've always wanted, helping you with hints, tips, warnings, and catching errors. While fixing issues is essential, understanding why a code change is positive is vital to a software developer's growth.
+
+We always provide you with as much information as possible to make the ultimate decision about your code, putting the power of choice in your hands.
+
+
+
+In this post, you'll get a quick recap of code inspections, what they are, and </p>
+        </div>
+        <div class="card__footer">
+            <div class="author">
+                <img src="https://blog.jetbrains.com/wp-content/uploads/2023/01/62d2f4d9361a3cab-50x50.gif" width="50" height="50" alt="Khalid Abuhakmeh" loading="lazy"  class="avatar avatar-200 wp-user-avatar wp-user-avatar-200 photo avatar-default">
+                <span>Khalid Abuhakmeh</span>
+            </div>
+            <span class="remark42__counter icon-comments" data-url="https://blog.jetbrains.com/dotnet/2023/03/20/why-is-resharper-suggesting-this/"></span>
+        </div>
+    </a>
+</div>
+                                                                                                                        
+<div class="col" post_id="330156">
+    <a class="card img-visible" href="https://blog.jetbrains.com/dotnet/2023/03/17/webinar-object-oriented-vs-functional-programming-with-csharp-and-fsharp/">
+        <img width="2560" height="1200" src="https://blog.jetbrains.com/wp-content/uploads/2023/03/DSGN-15712_Webinar_Usr-Enzler_Blog_Featured_image_1280x600.png" class="attachment-full size-full wp-post-image" alt="Urs Enzler Object-Oriented vs. Functional Programming with C# and F#" loading="lazy" sizes="(max-width: 768px) 768px , 525px" />        <div class="card__header">
+            <time class="publish-date" data-year="2023" data-month="03" data-day="17" datetime="2023-03-17"></time>
+            <h3>Webinar &#8211; Object-Oriented vs. Functional Programming With C# and F#</h3>        </div>
+        <div class="card__body">
+                        <p>Join us Thursday, April 6, 2023, 3:00 - 4:00 PM UTC (check other timezones) for our free live webinar, Object-Oriented vs. Functional Programming With C# and F#, with Software Architect at Calitime AG, Urs Enzler.
+
+
+
+Register now and get a reminder, or join on YouTube
+
+
+
+Modern programming languages support both object-oriented and functional programming to a large extent. What are the differences between the two approaches, and where is one more appropriate than the other? Can these two programming paradigms be combined?
+
+
+
+In this session, we look at the differences and similarities between </p>
+        </div>
+        <div class="card__footer">
+            <div class="author">
+                <img src="https://blog.jetbrains.com/wp-content/uploads/2023/01/62d2f4d9361a3cab-50x50.gif" width="50" height="50" alt="Khalid Abuhakmeh" loading="lazy"  class="avatar avatar-200 wp-user-avatar wp-user-avatar-200 photo avatar-default">
+                <span>Khalid Abuhakmeh</span>
+            </div>
+            <span class="remark42__counter icon-comments" data-url="https://blog.jetbrains.com/dotnet/2023/03/17/webinar-object-oriented-vs-functional-programming-with-csharp-and-fsharp/"></span>
+        </div>
+    </a>
+</div>
+                                                                                                                        
+<div class="col" post_id="332711">
+    <a class="card img-visible" href="https://blog.jetbrains.com/dotnet/2023/03/16/unity-dots-support-in-rider-2023-1/">
+        <img width="2560" height="1200" src="https://blog.jetbrains.com/wp-content/uploads/2023/03/DSGN-15720_DOTS_Unity_Rider_Blog_Featured_image_1280x600.png" class="attachment-full size-full wp-post-image" alt="" loading="lazy" sizes="(max-width: 768px) 768px , 525px" />        <div class="card__header">
+            <time class="publish-date" data-year="2023" data-month="03" data-day="16" datetime="2023-03-16"></time>
+            <h3>Unity DOTS support in Rider 2023.1</h3>        </div>
+        <div class="card__body">
+                        <p>Rider has always been the most innovative script editor for Unity (and Unreal!) game development, and Rider 2023.1 is no different. As part of this release, we’ve added support for Unity’s new Data Oriented Tech Stack, more commonly known as DOTS.
+
+
+
+We’ve got new file templates, Code Vision for DOTS types, generation for boilerplate code, and of course, inspections and quick fixes. Let's take a look at how Rider can help you write and update your codebase to work in the new DOTS style!
+
+
+
+
+
+
+
+Furthermore, we'll be at GDC in San Francisco next week, so if you have any questions, feature reques</p>
+        </div>
+        <div class="card__footer">
+            <div class="author">
+                <img src="https://secure.gravatar.com/avatar/e29361f2b498fb2231dca801f0e8f4e3?s=50&r=g" width="50" height="50" alt="Matt Ellis" loading="lazy"  class="avatar avatar-200 wp-user-avatar wp-user-avatar-200 photo avatar-default">
+                <span>Matt Ellis</span>
+            </div>
+            <span class="remark42__counter icon-comments" data-url="https://blog.jetbrains.com/dotnet/2023/03/16/unity-dots-support-in-rider-2023-1/"></span>
+        </div>
+    </a>
+</div>
+                                                                                                                        
+<div class="col" post_id="326405">
+    <a class="card img-visible" href="https://blog.jetbrains.com/dotnet/2023/03/14/static-interface-members-generic-attributes-auto-default-structs-using-csharp-11-in-rider-and-resharper/">
+        <img width="2560" height="1200" src="https://blog.jetbrains.com/wp-content/uploads/2023/03/rs-how-tos-blog-featured-image-1280x600-1-1.png" class="attachment-full size-full wp-post-image" alt="" loading="lazy" sizes="(max-width: 768px) 768px , 525px" />        <div class="card__header">
+            <time class="publish-date" data-year="2023" data-month="03" data-day="14" datetime="2023-03-14"></time>
+            <h3>Static Interface Members, Generic Attributes, Auto-Default Structs – Using C# 11 in Rider and ReSharper</h3>        </div>
+        <div class="card__body">
+                        <p>The .NET 7 SDK arrived a few months ago, with many .NET developers looking forward to this release and the brand-new C# language features that come along with it. If you haven't put your fingers on it yet, all you need is:
+
+
+
+Download the latest .NET SDKUpdate your global.json if you have oneUpdate the TargetFramework in your project to net7.0 (only for some features)Update the LangVersion property in your project to 11.0 or preview
+
+
+
+In this series, we will dive into the most interesting features that are coming with C# 11 and show how we updated ReSharper and Rider to support you in applyin</p>
+        </div>
+        <div class="card__footer">
+            <div class="author">
+                <img src="https://secure.gravatar.com/avatar/d62865a9f8b5de8c0d63105a36d1f332?s=50&r=g" width="50" height="50" alt="Matthias Koch" loading="lazy"  class="avatar avatar-200 wp-user-avatar wp-user-avatar-200 photo avatar-default">
+                <span>Matthias Koch</span>
+            </div>
+            <span class="remark42__counter icon-comments" data-url="https://blog.jetbrains.com/dotnet/2023/03/14/static-interface-members-generic-attributes-auto-default-structs-using-csharp-11-in-rider-and-resharper/"></span>
+        </div>
+    </a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__top">
+            <ul class="footer__nav">
+                <li id="menu-item-118361" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-118361"><a href="https://www.jetbrains.com/company/privacy.html">Privacy &#038; Security</a></li>
+                <li id="menu-item-118362" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-118362"><a href="https://www.jetbrains.com/company/useterms.html">Terms of Use</a></li>
+                <li id="menu-item-118363" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-118363"><a href="https://www.jetbrains.com/legal/">Legal</a></li>
+                <li id="menu-item-118364" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-118364"><a href="https://www.jetbrains.com/genuine-tools/">Genuine tools</a></li>
+            </ul>
+        </div>
+        <ul class="social">
+            <li><a href="https://twitter.com/jetbrains"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.facebook.com/JetBrains"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://www.linkedin.com/company/jetbrains"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://www.instagram.com/jetbrains/"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://www.youtube.com/user/JetBrainsTV"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="https://blog.jetbrains.com/feed/"><i class="fa fa-rss"></i></a></li>
+        </ul>
+        <span class="copyright">Copyright © 2000–2022 JetBrains s.r.o.</span>
+    </div>
+</footer>
+<span class="overlay"></span>
+</div>
+
+
+<script>var remark_config = {
+                                            host: "https://comments.blog.jetbrains.com",
+                                            site_id: "remark",
+                                            components: ["counter","embed"],
+                                            max_shown_comments: 150,
+                                            locale: "en"
+                                            };
+                                            </script><script>!function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);</script><script type='text/javascript' src='https://blog.jetbrains.com/wp-content/plugins/accordion-blocks/js/accordion-blocks.min.js?ver=1679448953' id='pb-accordion-blocks-frontend-script-js'></script>
+<script type='module' src='https://blog.jetbrains.com/wp-content/plugins/instant-page/instantpage.js?ver=5.6.1' id='instantpage-js'></script>
+<script type='text/javascript' src='https://blog.jetbrains.com/wp-content/plugins/map-shortcode//map.js?ver=e138ef45bff209668d39d296de5c7b40' id='gmaps-js'></script>
+<script type='text/javascript' id='ppress-frontend-script-js-extra'>
+/* <![CDATA[ */
+var pp_ajax_form = {"ajaxurl":"https:\/\/blog.jetbrains.com\/wp-admin\/admin-ajax.php","confirm_delete":"Are you sure?","deleting_text":"Deleting...","deleting_error":"An error occurred. Please try again.","nonce":"0678febdac","disable_ajax_form":"false","is_checkout":"0","is_checkout_tax_enabled":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://blog.jetbrains.com/wp-content/plugins/wp-user-avatar/assets/js/frontend.min.js?ver=4.3.2' id='ppress-frontend-script-js'></script>
+<script type='text/javascript' src='https://blog.jetbrains.com/wp-content/plugins/enlighter/cache/enlighterjs.min.js?ver=1xeD0E9ltABXgL+' id='enlighterjs-js'></script>
+<script type='text/javascript' id='enlighterjs-js-after'>
+!function(e,n){if("undefined"!=typeof EnlighterJS){var o={"selectors":{"block":"pre.EnlighterJSRAW","inline":"code.EnlighterJSRAW"},"options":{"indent":4,"ampersandCleanup":true,"linehover":true,"rawcodeDbclick":false,"textOverflow":"scroll","linenumbers":false,"theme":"wpcustom","language":"generic","retainCssClasses":false,"collapse":false,"toolbarOuter":"","toolbarTop":"{BTN_RAW}{BTN_COPY}{BTN_WINDOW}{BTN_WEBSITE}","toolbarBottom":""}};(e.EnlighterJSINIT=function(){EnlighterJS.init(o.selectors.block,o.selectors.inline,o.options)})()}else{(n&&(n.error||n.log)||function(){})("Error: EnlighterJS resources not loaded yet!")}}(window,console);
+</script>
+<script type='text/javascript' id='app-js-extra'>
+/* <![CDATA[ */
+var loadmore_params = {"ajaxurl":"https:\/\/blog.jetbrains.com\/wp-admin\/admin-ajax.php?wpml_lang=en","post_data":{"post_type":"dotnet"},"current_page":"1","max_page":"0"};
+var current_lang = "en-us";
+var jetbrains_texts = {"loadmore":{"load_more":"Load more","loading":"Loading..."}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://blog.jetbrains.com/wp-content/themes/jetbrains/assets/dist/app.min.js?ver=2.1.4' id='app-js'></script>
+<script type='text/javascript' src='https://blog.jetbrains.com/wp-content/themes/jetbrains/assets/dist/singlepost.min.js?ver=2.1.4' id='single-post-js'></script>
+<script>
+    if(jQuery('.subscribe-form').length>0){
+        ui.subscribeForm('.subscribe-form');
+    }
+    // if(jQuery('img[data-gif-src]').length>0){
+    //     ui.gifPlayer('img[data-gif-src]');
+    // }
+</script>
+<!-- Build # -->
+</body>
+</html>
