@@ -19,7 +19,7 @@ Alternatively, click the flag icons below or on the top right corner of the page
 
 [<img src="https://github.com/wangyat15/JetBrains/blob/main/flag-de.png" width="40"/>](https://htmlpreview.github.io/?https://github.com/wangyat15/JetBrains/blob/main/rider-2023-1-eap-3_de.html)   
 
-[Original source text:](https://blog.jetbrains.com/dotnet/2023/02/03/rider-2023-1-eap-3/)
+*[Original source text:](https://blog.jetbrains.com/dotnet/2023/02/03/rider-2023-1-eap-3/)*
 
 https://blog.jetbrains.com/dotnet/2023/02/03/rider-2023-1-eap-3/
 
