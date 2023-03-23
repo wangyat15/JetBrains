@@ -1,4 +1,4 @@
-# JetBrains - Localization of software and related marketing contents
+# JetBrains - Localization of software and the related marketing contents
 
 ## Preview URLs 
 Click below links to view the translations from English to Traditional Chinese, Simplified Chinese and German versions. 
