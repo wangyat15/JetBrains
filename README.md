@@ -10,7 +10,7 @@ Click below links to view the translations from English to Traditional Chinese, 
 <a href="https://en.wikipedia.org/wiki/Boracay" target="_blank"><img src="//www.html.am/images/html-codes/links/boracay-white-beach-sunset-300x225.jpg" width="300" height="225" alt="Photo of White Beach in Boracay, Philippines" /></a>
 
 
-Alternatively, click the country flag icons on the top right corner of the page to switch between different language versions.  
+## Alternatively, click the country flag icons below or on the top right corner of the page to switch between different language versions.  
 
 [<img src="https://github.com/wangyat15/JetBrains/blob/main/flag-en.png" width="40" height="32"/>](https://htmlpreview.github.io/?https://github.com/wangyat15/JetBrains/blob/main/rider-2023-1-eap-3_en.html)   
 
