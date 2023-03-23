@@ -14,7 +14,7 @@ Alternatively, click the country flag icons on the top right corner of the page 
 <a href="https://htmlpreview.github.io/?https://github.com/wangyat15/JetBrains/blob/main/rider-2023-1-eap-3_en.html" target="_self><img src="https://github.com/wangyat15/JetBrains/blob/main/flag-en.png" width="40" height="45"/> </a>
 
 
-![<img src="https://github.com/wangyat15/JetBrains/blob/main/flag-zh.png" width="40" height="32"/>](https://htmlpreview.github.io/?https://github.com/wangyat15/JetBrains/blob/main/rider-2023-1-eap-3_en.html)
+[<img src="https://github.com/wangyat15/JetBrains/blob/main/flag-zh.png" width="40" height="32"/>](https://htmlpreview.github.io/?https://github.com/wangyat15/JetBrains/blob/main/rider-2023-1-eap-3_en.html)
                                                                                               
                                                                                               
                                                                                               <img src="https://github.com/wangyat15/JetBrains/blob/main/flag-cn.png" width="38" height="30"/> <img src="https://github.com/wangyat15/JetBrains/blob/main/flag-de.png" width="40" height="35"/>
