@@ -1,7 +1,7 @@
 # JetBrains - Localization of software and the related marketing contents
 
 ## Preview URLs 
-Click below links to view the translations from English to Traditional Chinese, Simplified Chinese and German versions. 
+To view the translation from English to Traditional Chinese, Simplified Chinese and German versions, please click on the links provided below. 
 
 + [English Version](https://htmlpreview.github.io/?https://github.com/wangyat15/JetBrains/blob/main/rider-2023-1-eap-3_en.html)
 + [Traditional Chinese Version - 繁體中文版](https://htmlpreview.github.io/?https://github.com/wangyat15/JetBrains/blob/main/rider-2023-1-eap-3_zh.html)
@@ -9,7 +9,7 @@ Click below links to view the translations from English to Traditional Chinese, 
 + [German Version - deutsche Fassung](https://htmlpreview.github.io/?https://github.com/wangyat15/JetBrains/blob/main/rider-2023-1-eap-3_de.html)
 
 ## Icon Shortcut Path 
-Alternatively, click the flag icons below or on the top right corner of the page to switch between different language versions.  
+Alternatively, to switch between different language versions, please click on the flag icons below or in the top right corner of the page.  
 
 [<img src="https://github.com/wangyat15/JetBrains/blob/main/flag-en.png" width="40"/>](https://htmlpreview.github.io/?https://github.com/wangyat15/JetBrains/blob/main/rider-2023-1-eap-3_en.html)   
 
@@ -22,4 +22,3 @@ Alternatively, click the flag icons below or on the top right corner of the page
 *[Original source text:](https://blog.jetbrains.com/dotnet/2023/02/03/rider-2023-1-eap-3/)*
 
 https://blog.jetbrains.com/dotnet/2023/02/03/rider-2023-1-eap-3/
-
