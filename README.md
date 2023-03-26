@@ -8,7 +8,7 @@ To view the translation from English to Traditional Chinese, Simplified Chinese 
 + [Simplified Chinese Version - 简体中文版](https://htmlpreview.github.io/?https://github.com/wangyat15/JetBrains/blob/main/rider-2023-1-eap-3_cn.html)
 + [German Version - deutsche Fassung](https://htmlpreview.github.io/?https://github.com/wangyat15/JetBrains/blob/main/rider-2023-1-eap-3_de.html)
 
-## Icon Shortcut Path 
+## Shortcut Icon 
 Alternatively, to switch between different language versions, please click on the flag icons below or in the top right corner of the page.  
 
 [<img src="https://github.com/wangyat15/JetBrains/blob/main/flag-en.png" width="40"/>](https://htmlpreview.github.io/?https://github.com/wangyat15/JetBrains/blob/main/rider-2023-1-eap-3_en.html)   
